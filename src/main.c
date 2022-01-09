@@ -5,7 +5,7 @@
 
 int main()
 {
-  printf("%s\n", "main");
+  printf("%s: %s\n", "main", HOST_TRIPLE);
   bar_func();
   foo_func();
   return 0;

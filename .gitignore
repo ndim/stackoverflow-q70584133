@@ -1,8 +1,21 @@
 /_b-*/
 
-/Makefile.in
+.deps/
+.dirstamp
+.libs/
+Makefile
+Makefile.in
+*.exe
+*.la
+*.lo
+*.o
+
 /aclocal.m4
 /auto-aux/
 /auto-m4/
 /autom4te.cache/
+/config.log
+/config.status
 /configure
+/libtool
+/src/main
