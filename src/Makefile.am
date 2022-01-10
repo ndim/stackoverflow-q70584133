@@ -62,4 +62,5 @@ main_SOURCES   =
 
 main_CPPFLAGS += -I$(top_srcdir)
 main_SOURCES  += main.c
+# main_LDADD    += libbar.la
 main_LDADD    += libfoo.la
