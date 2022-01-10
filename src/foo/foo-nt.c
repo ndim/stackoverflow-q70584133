@@ -4,5 +4,6 @@
 
 void foo_host_func(void)
 {
-  printf("%s: Windows %#06x\n", "foo_host_func", WINVER);
+  printf("%s: Windows %#06x = %u.%u\n", "foo_host_func", WINVER,
+	 (WINVER>>8)&0xff, WINVER&0xff);
 }
