@@ -39,7 +39,7 @@ AC_MSG_RESULT([$my_host_os_type])
 AM_CONDITIONAL([MY_HOST_OS_TYPE_LINUX],   [test "x$my_host_os_type" = xlinux])
 AM_CONDITIONAL([MY_HOST_OS_TYPE_WINDOWS], [test "x$my_host_os_type" = xwindows])
 
-AC_DEFINE_UNQUOTED([HOST_TRIPLE],     ["${host}"])
+AC_DEFINE_UNQUOTED([HOST_TRIPLET],    ["${host}"])
 AC_DEFINE_UNQUOTED([MY_HOST_OS_TYPE], ["${my_host_os_type}"])
 
 AM_COND_IF([MY_HOST_OS_TYPE_LINUX], [dnl
