@@ -20,7 +20,7 @@ libbar_la_SOURCES      += ../bar/bar.c
 libbar_la_SOURCES      += ../bar/bar.h
 barinclude_HEADERS     += ../bar/bar.h
 
-if OS_WINDOWS
+if MY_HOST_OS_TYPE_WINDOWS
 libbar_la_LDFLAGS      += -no-undefined
 endif
 
@@ -40,17 +40,18 @@ libfoo_la_SOURCES      += foo/foo.c
 libfoo_la_SOURCES      += foo/foo.h
 nobase_include_HEADERS += foo/foo.h
 
-libfoo_la_SOURCES      += foo/foo-host.h
+libfoo_la_SOURCES      += foo/foo-host-os-type.h
+nobase_include_HEADERS += foo/foo-host-os-type.h
 
-if OS_LINUX
+if MY_HOST_OS_TYPE_LINUX
 libfoo_la_SOURCES      += foo/foo-linux.c
 
 libfoo_la_CFLAGS       += $(PTHREAD_CFLAGS)
 libfoo_la_LIBADD       += $(PTHREAD_LIBS)
 endif
 
-if OS_WINDOWS
-libfoo_la_SOURCES      += foo/foo-nt.c
+if MY_HOST_OS_TYPE_WINDOWS
+libfoo_la_SOURCES      += foo/foo-windows.c
 libfoo_la_LDFLAGS      += -no-undefined
 endif
 
