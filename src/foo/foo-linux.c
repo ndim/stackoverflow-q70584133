@@ -13,5 +13,5 @@ void foo_host_os_type_func(void)
          (LINUX_VERSION_CODE>>16)&0xff,
          (LINUX_VERSION_CODE>> 8)&0xff,
          (LINUX_VERSION_CODE>> 0)&0xff
-  );
+         );
 }

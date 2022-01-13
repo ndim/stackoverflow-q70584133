@@ -9,5 +9,7 @@ void foo_host_os_type_func(void)
          " %#06x = %u.%u\n",
          __func__,
          WINVER,
-         (WINVER>>8)&0xff, WINVER&0xff);
+         (WINVER>>8)&0xff,
+         (WINVER>>0)&0xff
+         );
 }
