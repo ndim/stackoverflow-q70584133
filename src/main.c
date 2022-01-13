@@ -10,7 +10,7 @@
 
 int main()
 {
-  printf("%s: %s\n", "main", HOST_TRIPLE);
+  printf("%s: %s\n", __func__, HOST_TRIPLE);
 
 #ifdef MAIN_DIRECTLY_USES_LIBBAR
   bar_func();

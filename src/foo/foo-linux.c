@@ -7,7 +7,7 @@ void foo_host_os_type_func(void)
   printf("%s: built for OS version %s"
          " %u = %#08x = %u.%u.%u"
          "\n",
-         "foo_host_os_type_func",
+         __func__,
          MY_HOST_OS_TYPE,
          LINUX_VERSION_CODE,
          LINUX_VERSION_CODE,
