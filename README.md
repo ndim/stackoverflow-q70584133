@@ -20,7 +20,7 @@ Build to run natively on the build host
 ---------------------------------------
 
     [user@host stackoverflow-q70584133]$ mkdir _b-host && cd _b-host
-    [user@host _b-host]$ ../configure --prefix=$PWD/_i
+    [user@host _b-host]$ ../configure --prefix=$PWD/_i CC="gcc -std=c99" CFLAGS="-pedantic -Wall -Wextra -Werror"
     […]
     [user@host _b-host]$ make && ./src/main
     […]
@@ -44,7 +44,7 @@ Of course, running the generated Windows executable on Linux requires
 wine to be installed.
 
     [user@host stackoverflow-q70584133]$ mkdir _b-w64 && cd _b-w64
-    [user@host _b-w64]$ ../configure --host=x86_64-w64-mingw32 --prefix=$PWD/_i
+    [user@host _b-w64]$ ../configure --host=x86_64-w64-mingw32 --prefix=$PWD/_i CC="x86_64-w64-mingw32-gcc -std=c99" CFLAGS="-pedantic -Wall -Wextra -Werror -Wno-error=attributes"
     […]
     [user@host _b-w64]$ make && ./src/main.exe
     […]
