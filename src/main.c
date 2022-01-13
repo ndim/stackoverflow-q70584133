@@ -10,8 +10,10 @@
 
 int main()
 {
-  printf("%s: %s\n", __func__, HOST_TRIPLET);
-  printf("func=%s: host_triplet=%s\n", __func__, HOST_TRIPLET);
+  printf("%s()"
+	 ": host_triplet=%s\n",
+	 __func__,
+	 HOST_TRIPLET);
 
 #ifdef MAIN_DIRECTLY_USES_LIBBAR
   bar_func();

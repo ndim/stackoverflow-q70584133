@@ -4,10 +4,10 @@
 
 void foo_host_os_type_func(void)
 {
-  printf("%s: built for OS version %s"
+  printf("%s()"
+	 ": built for host OS version ="
          " %#06x = %u.%u\n",
          __func__,
-         MY_HOST_OS_TYPE,
          WINVER,
          (WINVER>>8)&0xff, WINVER&0xff);
 }

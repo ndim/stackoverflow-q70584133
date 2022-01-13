@@ -6,7 +6,11 @@
 
 void foo_func(void)
 {
-  printf("%s %s\n", __func__, MY_HOST_OS_TYPE);
+  printf("%s()"
+	 ": host_os_type=%s\n",
+	 __func__,
+	 MY_HOST_OS_TYPE);
+
   bar_func();
   foo_host_os_type_func();
 }
